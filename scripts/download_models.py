@@ -23,12 +23,9 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    if args.model:
-        dest = download_model(args.model)
-        print(f"Downloaded {args.model} -> {dest}")
-        return
-
-    for name, dest in download_all().items():
+    names = [args.model] if args.model else list(MODELS)
+    for name in names:
+        dest = download_model(name)
         print(f"Downloaded {name} -> {dest}")
 
 
