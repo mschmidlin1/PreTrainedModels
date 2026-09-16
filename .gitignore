@@ -1,0 +1,17 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+models/*
+!models/.gitkeep
+*.safetensors
+*.png
+.python-version
+.DS_Store
+Thumbs.db
